@@ -1,0 +1,4 @@
+name: MineChef
+main: org.minechef.plugin.MainPlugin
+version: 0.1-SNAPSHOT
+commands:
