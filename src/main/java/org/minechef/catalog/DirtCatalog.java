@@ -39,6 +39,8 @@ public class DirtCatalog extends AbstractCatalog {
 		.setIngredient('R', Material.REDSTONE));
 
 		addRecipe(new ShapedRecipe(Material.GRAVEL, 4)
-		.shape("DD", "DD").setIngredient('D', Material.DIRT));
+		.shape("DS", "SD")
+		.setIngredient('D', Material.DIRT)
+		.setIngredient('S', Material.COBBLESTONE));
 	}
 }

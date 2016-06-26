@@ -7,6 +7,26 @@ import org.minechef.inventory.ShapelessRecipe;
 import org.minechef.material.MaterialVariant;
 
 public class StoneCatalog extends AbstractCatalog {
+	private static Material[] blocks = {
+		Material.COBBLESTONE,
+		Material.SMOOTH_BRICK,
+		Material.BRICK,
+		Material.SANDSTONE,
+		Material.RED_SANDSTONE,
+		Material.NETHER_BRICK,
+		Material.QUARTZ_BLOCK
+	};
+
+	private static Material[] stairs = {
+		Material.COBBLESTONE_STAIRS,
+		Material.SMOOTH_STAIRS,
+		Material.BRICK_STAIRS,
+		Material.SANDSTONE_STAIRS,
+		Material.RED_SANDSTONE_STAIRS,
+		Material.NETHER_BRICK_STAIRS,
+		Material.QUARTZ_STAIRS
+	};
+
 	public StoneCatalog() {
 		super();
 
@@ -17,11 +37,14 @@ public class StoneCatalog extends AbstractCatalog {
 	}
 
 	private void addBlockRecipes() {
+		/* addRecipe(new ShapelessRecipe(Material.SAND, 4)
+		.addIngredient(Material.SANDSTONE)); */
+
+		/* addRecipe(new ShapelessRecipe(Material.CLAY_BRICK, 4)
+		.addIngredient(Material.BRICK)); */
+
 		addRecipe(new ShapedRecipe(Material.STONE, 4)
 		.shape("SS", "SS").setIngredient('S', Material.COBBLESTONE));
-
-		addRecipe(new ShapelessRecipe(Material.CLAY_BRICK, 4)
-		.addIngredient(Material.BRICK));
 
 		addRecipe(new ShapedRecipe(Material.COBBLESTONE)
 		.shape("S", "S").setIngredient('S', MaterialVariant.COBBLESTONE_SLAB));
@@ -39,26 +62,13 @@ public class StoneCatalog extends AbstractCatalog {
 	}
 
 	private void addStairRecipes() {
-		addRecipe(new ShapedRecipe(Material.COBBLESTONE_STAIRS, 8)
-		.shape("S  ", "SS ", "SSS").setIngredient('S', Material.COBBLESTONE));
+		for (int i = 0, n = blocks.length; i < n; i++) {
+			addRecipe(new ShapedRecipe(stairs[i], 4)
+			.shape("S ", "SS").setIngredient('S', blocks[i]));
 
-		addRecipe(new ShapedRecipe(Material.SMOOTH_STAIRS, 8)
-		.shape("S  ", "SS ", "SSS").setIngredient('S', Material.SMOOTH_BRICK));
-
-		addRecipe(new ShapedRecipe(Material.BRICK_STAIRS, 8)
-		.shape("S  ", "SS ", "SSS").setIngredient('S', Material.BRICK));
-
-		addRecipe(new ShapedRecipe(Material.SANDSTONE_STAIRS, 8)
-		.shape("S  ", "SS ", "SSS").setIngredient('S', Material.SANDSTONE));
-
-		addRecipe(new ShapedRecipe(Material.RED_SANDSTONE_STAIRS, 8)
-		.shape("S  ", "SS ", "SSS").setIngredient('S', Material.RED_SANDSTONE));
-
-		addRecipe(new ShapedRecipe(Material.NETHER_BRICK_STAIRS, 8)
-		.shape("S  ", "SS ", "SSS").setIngredient('S', Material.NETHER_BRICK));
-
-		addRecipe(new ShapedRecipe(Material.QUARTZ_STAIRS, 8)
-		.shape("S  ", "SS ", "SSS").setIngredient('S', Material.QUARTZ_BLOCK));
+			addRecipe(new ShapedRecipe(stairs[i], 8)
+			.shape("S  ", "SS ", "SSS").setIngredient('S', blocks[i]));
+		}
 	}
 
 	private void addMetalRecipes() {

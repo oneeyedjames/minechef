@@ -58,6 +58,12 @@ public enum MaterialVariant {
 	ROSE_BUSH (Material.DOUBLE_PLANT, 4),
 	PEONY     (Material.DOUBLE_PLANT, 5),
 
+	RAW_SALMON (Material.RAW_FISH, 1),
+	CLOWNFISH  (Material.RAW_FISH, 2),
+	PUFFERFISH (Material.RAW_FISH, 3),
+
+	COOKED_SALMON (Material.COOKED_FISH, 1),
+
 	CREEPER_EGG       (Material.MONSTER_EGG, 50),
 	SKELETON_EGG      (Material.MONSTER_EGG, 51),
 	SPIDER_EGG        (Material.MONSTER_EGG, 52),
@@ -91,6 +97,7 @@ public enum MaterialVariant {
 	IRON_GOLEM_EGG (Material.MONSTER_EGG, 99),
 	HORSE_EGG      (Material.MONSTER_EGG, 100),
 	RABBIT_EGG     (Material.MONSTER_EGG, 101),
+	POLAR_BEAR_EGG (Material.MONSTER_EGG, 102),
 
 	VILLAGER_EGG (Material.MONSTER_EGG, 120);
 

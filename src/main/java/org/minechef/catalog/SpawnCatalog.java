@@ -48,6 +48,9 @@ public class SpawnCatalog extends AbstractCatalog {
 		addRecipe(new ShapelessRecipe(MaterialVariant.RABBIT_EGG)
 		.addIngredient(Material.EGG).addIngredient(Material.RABBIT_HIDE));
 
+		addRecipe(new ShapelessRecipe(MaterialVariant.POLAR_BEAR_EGG)
+		.addIngredient(Material.EGG).addIngredient(Material.SNOW_BALL));
+
 		addRecipe(new ShapelessRecipe(MaterialVariant.WOLF_EGG)
 		.addIngredient(Material.EGG).addIngredient(Material.STICK));
 
