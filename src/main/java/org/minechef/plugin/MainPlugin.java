@@ -59,7 +59,6 @@ public class MainPlugin extends JavaPlugin {
 
 	public void addCatalog(Catalog catalog) {
 		Iterator<Recipe> iterator = catalog.recipeIterator();
-
 		while (iterator.hasNext())
 			addRecipe(iterator.next());
 	}
@@ -70,7 +69,6 @@ public class MainPlugin extends JavaPlugin {
 
 	private void resetRecipes() {
 		Iterator<Recipe> iterator = getServer().recipeIterator();
-
 		while (iterator.hasNext()) {
 			Recipe recipe = iterator.next();
 			ItemStack result = new ItemStack(recipe.getResult());
@@ -106,7 +104,7 @@ public class MainPlugin extends JavaPlugin {
 					iterator.remove();
 					break;
 				case INK_SACK:
-					if (result.getVariant() == MaterialVariant.LIGHT_GRAY_DYE)
+					if (result.getVariant() == MaterialVariant.SILVER_DYE)
 						iterator.remove();
 					break;
 				default:

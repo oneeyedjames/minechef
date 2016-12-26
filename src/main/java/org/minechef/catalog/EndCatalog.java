@@ -25,5 +25,13 @@ public class EndCatalog extends AbstractCatalog {
 		.setIngredient('D', Material.DIAMOND)
 		.setIngredient('O', Material.OBSIDIAN)
 		.setIngredient('S', Material.ENDER_STONE));
+
+		addRecipe(new ShapedRecipe(Material.SHULKER_SHELL)
+		.shape("PPP", "P P", "P P").setIngredient('P', Material.PURPUR_BLOCK));
+
+		addRecipe(new ShapedRecipe(Material.CHORUS_FLOWER)
+		.shape("SSS", "SFS", "SSS")
+		.setIngredient('S', Material.SEEDS)
+		.setIngredient('F', Material.CHORUS_FRUIT));
 	}
 }

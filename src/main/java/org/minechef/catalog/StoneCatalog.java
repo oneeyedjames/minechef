@@ -14,7 +14,8 @@ public class StoneCatalog extends AbstractCatalog {
 		Material.SANDSTONE,
 		Material.RED_SANDSTONE,
 		Material.NETHER_BRICK,
-		Material.QUARTZ_BLOCK
+		Material.QUARTZ_BLOCK,
+		Material.PURPUR_BLOCK
 	};
 
 	private static Material[] stairs = {
@@ -24,7 +25,8 @@ public class StoneCatalog extends AbstractCatalog {
 		Material.SANDSTONE_STAIRS,
 		Material.RED_SANDSTONE_STAIRS,
 		Material.NETHER_BRICK_STAIRS,
-		Material.QUARTZ_STAIRS
+		Material.QUARTZ_STAIRS,
+		Material.PURPUR_STAIRS
 	};
 
 	public StoneCatalog() {
@@ -46,11 +48,11 @@ public class StoneCatalog extends AbstractCatalog {
 		addRecipe(new ShapedRecipe(Material.STONE, 4)
 		.shape("SS", "SS").setIngredient('S', Material.COBBLESTONE));
 
-		addRecipe(new ShapedRecipe(Material.COBBLESTONE)
-		.shape("S", "S").setIngredient('S', MaterialVariant.COBBLESTONE_SLAB));
-
 		addRecipe(new ShapedRecipe(Material.STONE)
 		.shape("S", "S").setIngredient('S', Material.STEP));
+
+		addRecipe(new ShapedRecipe(Material.COBBLESTONE)
+		.shape("S", "S").setIngredient('S', MaterialVariant.COBBLESTONE_SLAB));
 
 		addRecipe(new ShapedRecipe(Material.BRICK)
 		.shape("S", "S").setIngredient('S', MaterialVariant.BRICK_SLAB));
@@ -58,7 +60,7 @@ public class StoneCatalog extends AbstractCatalog {
 		addRecipe(new ShapedRecipe(Material.NETHER_BRICK)
 		.shape("S", "S").setIngredient('S', MaterialVariant.NETHER_BRICK_SLAB));
 
-		// Sandstone, Stone Brick, and Quartz slabs produce Chiseled blocks
+		// Sandstone, Stone Brick, Quartz, and Purpur slabs produce Chiseled blocks
 	}
 
 	private void addStairRecipes() {

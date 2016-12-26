@@ -4,6 +4,7 @@ import org.bukkit.Material;
 
 import org.minechef.inventory.FurnaceRecipe;
 import org.minechef.inventory.ShapedRecipe;
+import org.minechef.inventory.ShapelessRecipe;
 import org.minechef.material.MaterialVariant;
 
 public class DirtCatalog extends AbstractCatalog {
@@ -14,9 +15,9 @@ public class DirtCatalog extends AbstractCatalog {
 		addRecipe(new FurnaceRecipe(Material.GRAVEL, MaterialVariant.COARSE_DIRT));
 
 		addRecipe(new ShapedRecipe(MaterialVariant.RED_SAND, 8)
-		.shape("SSS", "SIS", "SSS")
+		.shape("SSS", "SRS", "SSS")
 		.setIngredient('S', Material.SAND)
-		.setIngredient('I', MaterialVariant.ROSE_RED));
+		.setIngredient('R', MaterialVariant.ROSE_RED));
 
 		addRecipe(new ShapedRecipe(Material.CLAY, 8)
 		.shape("DDD", "DBD", "DDD")
@@ -39,8 +40,14 @@ public class DirtCatalog extends AbstractCatalog {
 		.setIngredient('R', Material.REDSTONE));
 
 		addRecipe(new ShapedRecipe(Material.GRAVEL, 4)
-		.shape("DS", "SD")
+		.shape("DC", "CD")
 		.setIngredient('D', Material.DIRT)
-		.setIngredient('S', Material.COBBLESTONE));
+		.setIngredient('C', Material.COBBLESTONE));
+
+		addRecipe(new ShapedRecipe(Material.BRICK, 4)
+		.shape("CC", "CC").setIngredient('C', Material.HARD_CLAY));
+
+		addRecipe(new ShapelessRecipe(Material.CLAY_BRICK, 4)
+		.addIngredient(Material.HARD_CLAY));
 	}
 }

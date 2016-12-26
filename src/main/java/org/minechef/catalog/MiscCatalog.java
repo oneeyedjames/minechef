@@ -9,6 +9,12 @@ public class MiscCatalog extends AbstractCatalog {
 	public MiscCatalog() {
 		super();
 
+		addRecipe(new ShapedRecipe(Material.MELON_BLOCK)
+		.shape("MM", "MM").setIngredient('M', Material.MELON));
+
+		addRecipe(new ShapelessRecipe(Material.MELON_SEEDS, 4)
+		.addIngredient(Material.MELON_BLOCK));
+
 		addRecipe(new ShapedRecipe(Material.SLIME_BALL)
 		.shape("SSS", "SCS", "SSS")
 		.setIngredient('S', Material.SUGAR)
