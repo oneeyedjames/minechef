@@ -24,6 +24,9 @@ public class NetherCatalog extends AbstractCatalog {
 		.setIngredient('S', Material.SAND)
 		.setIngredient('B', Material.LAVA_BUCKET));
 
+		addRecipe(new ShapedRecipe(Material.GHAST_TEAR)
+		.shape("QQQ", "QQQ", "QQQ").setIngredient('Q', Material.QUARTZ));
+
 		addRecipe(new ShapedRecipe(Material.NETHER_STALK, 8)
 		.shape("MMM", "MRM", "MMM")
 		.setIngredient('R', Material.REDSTONE)

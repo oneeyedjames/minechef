@@ -372,6 +372,14 @@ _Shapeless Recipe_
 1. Sand
 2. Lava Bucket
 
+### Ghast Tear
+```
+1 1 1
+1 1 1
+1 1 1
+```
+1. Nether Quartz
+
 ### Nether Wart (x8)
 ```
 1 1 1
