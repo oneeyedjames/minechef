@@ -20,6 +20,9 @@ public class MiscCatalog extends AbstractCatalog {
 		.setIngredient('S', Material.SUGAR)
 		.setIngredient('C', Material.CACTUS));
 
+		addRecipe(new ShapelessRecipe(Material.MAGMA_CREAM, 4)
+		.addIngredient(Material.MAGMA));
+
 		addRecipe(new ShapedRecipe(Material.SULPHUR, 4)
 		.shape("CGC", "GCG", "CGC")
 		.setIngredient('C', Material.COAL)

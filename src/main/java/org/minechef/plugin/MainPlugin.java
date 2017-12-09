@@ -4,15 +4,21 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Properties;
 
 import org.bukkit.Material;
+import org.bukkit.Server;
 import org.bukkit.event.Listener;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.inventory.Recipe;
 import org.bukkit.material.MaterialData;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import org.minechef.catalog.*;
+import org.minechef.event.CraftListener;
 import org.minechef.event.DamageListener;
 import org.minechef.event.DropListener;
 import org.minechef.inventory.ItemStack;
@@ -68,10 +74,16 @@ public class MainPlugin extends JavaPlugin {
 	}
 
 	private void resetRecipes() {
-		Iterator<Recipe> iterator = getServer().recipeIterator();
+		Server server = getServer();
+
+		List<Recipe> preserver = new LinkedList<Recipe>();
+		Iterator<Recipe> iterator = server.recipeIterator();
+
 		while (iterator.hasNext()) {
 			Recipe recipe = iterator.next();
 			ItemStack result = new ItemStack(recipe.getResult());
+
+			// preserver.add(recipe);
 
 			switch (result.getType()) {
 				case FENCE:
@@ -92,7 +104,8 @@ public class MainPlugin extends JavaPlugin {
 				case DARK_OAK_FENCE:
 				case DARK_OAK_FENCE_GATE:
 				case DARK_OAK_STAIRS:
-					iterator.remove();
+					// preserver.remove(recipe);
+					recipe.getResult().setAmount(5);
 					break;
 				case COBBLESTONE_STAIRS:
 				case SMOOTH_STAIRS:
@@ -101,15 +114,20 @@ public class MainPlugin extends JavaPlugin {
 				case RED_SANDSTONE_STAIRS:
 				case NETHER_BRICK_STAIRS:
 				case QUARTZ_STAIRS:
-					iterator.remove();
+					// preserver.remove(recipe);
 					break;
 				case INK_SACK:
-					if (result.getVariant() == MaterialVariant.SILVER_DYE)
-						iterator.remove();
+					// if (result.getVariant() == MaterialVariant.SILVER_DYE)
+					// 	preserver.remove(recipe);
 					break;
 				default:
 					break;
 			}
 		}
+
+		// server.clearRecipes();
+		//
+		// for (Recipe recipe : preserver)
+		// 	server.addRecipe(recipe);
 	}
 }

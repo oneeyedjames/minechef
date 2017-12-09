@@ -475,6 +475,10 @@ _Shapeless Recipe_
 1. Sugar
 2. Cactus
 
+### Magma Cream (x4)
+_Shapeless Recipe_
+1. Magma (block)
+
 ### Gun Powder (x4)
 ```
 1 2 1

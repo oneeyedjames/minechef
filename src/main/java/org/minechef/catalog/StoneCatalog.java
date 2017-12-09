@@ -39,12 +39,6 @@ public class StoneCatalog extends AbstractCatalog {
 	}
 
 	private void addBlockRecipes() {
-		/* addRecipe(new ShapelessRecipe(Material.SAND, 4)
-		.addIngredient(Material.SANDSTONE)); */
-
-		/* addRecipe(new ShapelessRecipe(Material.CLAY_BRICK, 4)
-		.addIngredient(Material.BRICK)); */
-
 		addRecipe(new ShapedRecipe(Material.STONE, 4)
 		.shape("SS", "SS").setIngredient('S', Material.COBBLESTONE));
 

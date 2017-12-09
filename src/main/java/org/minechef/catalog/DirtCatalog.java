@@ -44,6 +44,15 @@ public class DirtCatalog extends AbstractCatalog {
 		.setIngredient('D', Material.DIRT)
 		.setIngredient('C', Material.COBBLESTONE));
 
+		addRecipe(new ShapelessRecipe(Material.SAND, 4)
+		.addIngredient(Material.SANDSTONE));
+
+		addRecipe(new ShapelessRecipe(Material.CLAY_BALL, 4)
+		.addIngredient(Material.CLAY));
+
+		addRecipe(new ShapelessRecipe(Material.CLAY_BRICK, 4)
+		.addIngredient(Material.BRICK));
+
 		addRecipe(new ShapedRecipe(Material.BRICK, 4)
 		.shape("CC", "CC").setIngredient('C', Material.HARD_CLAY));
 
